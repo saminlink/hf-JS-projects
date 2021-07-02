@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            body {
+                height: 100vh;
+                margin: 10px;
+            }
+
+            img {
+                margin: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <img src="images/zeroblur.jpg" alt="mon" id="zero">
+        <img src="images/oneblur.jpg" alt="mon" id="one">
+        <img src="images/twoblur.jpg" alt="mon" id="two">
+        <img src="images/threeblur.jpg" alt="mon" id="three">
+        <img src="images/fourblur.jpg" alt="mon" id="four">
+        <img src="images/fiveblur.jpg" alt="mon" id="five">
+
+
+        <script>
+
+            window.onload = init;
+
+            function init() {
+                var images = document.getElementsByTagName("img");
+                for (var i = 0; i < images.length; i++) {
+                    images[i].onclick = showAnswer;
+                    //we can use the onmousemove, mouseeover, mouseout property
+                    //in place of the onclick property.
+                }
+            }
+
+            function showAnswer(eventObj) {
+                var image = eventObj.target;
+
+                var name = image.id;
+                name = name + ".jpg";
+                image.src = "images/" + name;
+
+                setTimeout(reblur, 3000, image);
+            }
+
+            function reblur(image) {
+                var name = image.id;
+                name = name + "blur.jpg";
+                image.src = "images/" + name;
+            }
+        </script>
+
+    </body>
+
+</html>

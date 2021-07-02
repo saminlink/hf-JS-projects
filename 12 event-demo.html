@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            img {
+                position: relative;
+                height: 100vh;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+        <span>
+            <img src="images/ronald.png" alt="ronaldo" id="black">
+        </span>
+       
+
+        <script>
+            window.onload = init;
+            function init() {
+                var ronald = document.getElementById("black");
+                ronald.onclick = showAnswer;
+            }
+
+            function  showAnswer() {
+                var ronald = document.getElementById("black");
+                ronald.src = "images/ro.png";
+            }
+        </script>
+    </body>
+
+</html>

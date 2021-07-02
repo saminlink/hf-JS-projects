@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+/* common style */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: Nunito,sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+/* End of common style */
+
+/* section-1 */
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background-color: #777;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.section-heading{
+    font-size: 7rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+
+.section-1-icon i{
+    font-size: 20rem;
+    color: #a79a2d;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    text-shadow: 0.3rem 0.3rem 0.3rem #000;
+    transition: transform .3s;
+}
+/* End of section-1 */
